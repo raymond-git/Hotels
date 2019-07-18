@@ -1,0 +1,22 @@
+.color{
+   background-color: rgb(128,0,0);
+}
+body{
+background-image: url("image/hotelimage.jpg");
+max-height: 100%;
+max-width: 100%;
+}
+.dropmenu{
+ 
+ border-style: solid;
+ border-color:maroon;
+ border-width: 5px;
+ margin: 100px;
+ margin-left: 33%;
+ margin-top: 10%;
+ width: 500px;
+ background-color:white;
+
+}
+
+
