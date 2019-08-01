@@ -1,0 +1,38 @@
+body {
+    background-image: url("image/hotelimage.jpg");
+    height: 100%;
+    width: 100%;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+}
+
+.card {
+    width:300px;
+    height:400px;
+    margin-bottom: 40px;
+    margin-right: 70px;
+}
+
+.list-view {
+    display: flex inline-block;
+    columns: 3;
+    display: flex;
+    flex-wrap: wrap;
+    height:2000px;    
+}
+.container {
+      margin-top: 50px;
+      margin-left: 20px;
+}
+
+.card-deck{
+    border: 1px solid red;
+    
+    overflow: hidden;
+    padding-bottom: 900px;
+   
+
+}
