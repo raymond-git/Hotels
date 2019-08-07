@@ -26,9 +26,6 @@ var getAllRecords = function(){
     );
   }
 
-
-
-
   var listView = function(id, attachment, hotel, price ) {
     return `
     
@@ -38,7 +35,7 @@ var getAllRecords = function(){
     <div class="card-body">
       <h5 class="card-title">${hotel}</h5>
       <p class="card-text">Price: $${price}</p>
-      <p> <a href="index2.html?id=${id}">Click here for more information</a></p>
+      <p> <a href="Hotel.html?id=${id}"> Click here for more information </a></p>
     </div>
   </div>
     `;
@@ -62,31 +59,22 @@ var getAllRecords = function(){
   }
 
 
-  var detailView = function(attachment, description, hotellocation) {
+  var detailView = function( attachment, description, hotellocation) {
     return `
-    <div class="info1">
-    <div class="card-deck">
-      <div class="card border-dark" style="width: 18rem;">
-        ${attachment ? `<img src="${attachment[0].url}">` : ``}
-          <div class="card-body">
-            <h2 class="card-title">${description}</h2> 
-         </div> 
-      </div>
-      
-       <div class="card border-dark" style="width: 18rem;">
-        <div class="card-body">
-          <h2 class="card-title">Description</h2> 
-          <p class="card-text">${hotellocation}</p>
-        </div>
-       </div>    
-      
-     </div>   
-    </div>  
-      <div class="back">
-      <p><button type="button"><a href="index2.html">Back</button></a>
-      </div> 
-      `;
+
+    
+<div class="Bord">
+
+<div class="card bg-dark text-white" style="height: 500px; width: 320px;">
+<div class="card-img-overlay">
+  <h5 class="card-title">${description}</h5>
+  <p class="card-text" style="width: 280px; text-align: justify; ">${hotellocation}</p>
+</div>
+</div>
+</div>
+       `;
     }
+    
     
   var id = getParameterByName('id');
   if (id) {

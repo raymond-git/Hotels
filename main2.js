@@ -16,11 +16,12 @@ var getAllRecords = function(){
             var id = record.id;
             var touristAttractions = record.fields['Tourist Attractions'];
             var touristPhotos = record.fields['Tourist Photos'];
+            var tripdescriptions = record.fields['Trip Descriptions'];
            
             
           
          
-          html.push(listView(id, touristAttractions, touristPhotos));
+          html.push(listView(id, touristAttractions, touristPhotos, tripdescriptions));
         });
         $('.list-view').append(html);
       }
@@ -30,19 +31,22 @@ var getAllRecords = function(){
 
 
 
-  var listView = function(id, touristPhotos, touristAttractions ) {
+  var listView = function(id, touristPhotos, touristAttractions, tripdescriptions ) {
     return `
-    
+
     <div class="card">
-    <div class="card">
-    ${touristPhotos ? `<img src="${touristPhotos[0].url}">` : ``}
-      <div class="card-body">
-        <h5 class="card-title">${touristAttractions}</h5>
-        <p> <a href="index3.html?id=${id}">Click here for more information</a></p>
-      </div>
+  <div class="card">
+  ${touristPhotos ? `<img src="${touristPhotos[0].url}">` : ``}
+    <div class="card-body">
+      <h5 class="card-title">${touristAttractions}</h5>
+      <p>${tripdescriptions}</p>
     </div>
-      `;
-    }
+  </div>
+  </div>
+    `;
+  }
+    
+    
 
 
   var getOneRecord = function(id) {
@@ -65,7 +69,7 @@ var getAllRecords = function(){
 
   var detailView = function(touristPhotos, touristAttractions, tripDescriptions, tripLocations) {
     return `
-    <div class="info">
+    
     <div class="card-deck">
       <div class="card border-dark" style="width: 18rem;">
         ${touristPhotos ? `<img src="${touristPhotos[0].url}">` : ``}

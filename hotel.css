@@ -28,11 +28,32 @@ img {
       margin-left: 20px;
 }
 
-.card-deck{
-    border: 1px solid red;
-    
-    overflow: hidden;
-    padding-bottom: 900px;
-   
+.border{
+    word-wrap: break-word;
+    border-style: 1px solid;
+    border-color: red;
+    width: 200%;
+    height: 520px;
+    margin-bottom: 900px;
+    margin-right: 70px;
+    display: inline;  
+}
+.card-text{
+    max-height: 100%;
+    width: 200%; 
+}
 
+.card-border{
+    border: 1px;
+    margin: 400px;
+    width:200px;
+    height:200px;
+    padding: 50px
+}
+
+.Bord{
+    padding-top: 500px;
+    margin-top: 500px;
+    
+    
 }
